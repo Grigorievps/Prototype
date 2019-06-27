@@ -126,7 +126,7 @@
                                         </view>
                                         <size key="customSize" width="40" height="40"/>
                                         <connections>
-                                            <outlet property="DateLable" destination="riZ-7A-vEs" id="Jth-Ue-8k9"/>
+                                            <outlet property="dateLable" destination="riZ-7A-vEs" id="Jth-Ue-8k9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -205,7 +205,7 @@
                     <tabBarItem key="tabBarItem" title="Calendar" id="yjD-fo-4mS"/>
                     <connections>
                         <outlet property="backButton" destination="4cV-He-jr0" id="3cc-5M-BWM"/>
-                        <outlet property="calendar" destination="USJ-in-t9f" id="JAg-mL-0dX"/>
+                        <outlet property="calendarView" destination="USJ-in-t9f" id="JAg-mL-0dX"/>
                         <outlet property="monthLable" destination="Qd2-Yt-X3Z" id="CI5-6o-DsI"/>
                         <outlet property="nextButton" destination="J0U-FH-PWa" id="aV9-gi-iop"/>
                         <outlet property="yearLable" destination="A5x-0s-gcu" id="Ntt-IX-1Ss"/>
