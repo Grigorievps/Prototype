@@ -16,6 +16,8 @@
 		3139C4B922C3843700AA1AA1 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C4B822C3843700AA1AA1 /* WorkoutViewController.swift */; };
 		3139C4BB22C3844600AA1AA1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C4BA22C3844600AA1AA1 /* CalendarViewController.swift */; };
 		3139C4BD22C3845800AA1AA1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C4BC22C3845800AA1AA1 /* ProfileViewController.swift */; };
+		3139C4C122C3A2C500AA1AA1 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C4C022C3A2C500AA1AA1 /* DateCollectionViewCell.swift */; };
+		3139C4C422C3A5A500AA1AA1 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C4C322C3A5A500AA1AA1 /* CalendarVars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3139C4B822C3843700AA1AA1 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		3139C4BA22C3844600AA1AA1 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3139C4BC22C3845800AA1AA1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3139C4C022C3A2C500AA1AA1 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		3139C4C322C3A5A500AA1AA1 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		3139C4A122C37BC700AA1AA1 /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
+				3139C4C222C3A57800AA1AA1 /* Model */,
 				3139C4BF22C384AA00AA1AA1 /* View */,
 				3139C4BE22C3847700AA1AA1 /* Controller */,
 				3139C4A222C37BC700AA1AA1 /* AppDelegate.swift */,
@@ -77,6 +82,7 @@
 				3139C4B622C3841C00AA1AA1 /* ProgressViewController.swift */,
 				3139C4B822C3843700AA1AA1 /* WorkoutViewController.swift */,
 				3139C4BA22C3844600AA1AA1 /* CalendarViewController.swift */,
+				3139C4C022C3A2C500AA1AA1 /* DateCollectionViewCell.swift */,
 				3139C4BC22C3845800AA1AA1 /* ProfileViewController.swift */,
 				3139C4B422C383FB00AA1AA1 /* ExcersisesViewController.swift */,
 			);
@@ -90,6 +96,14 @@
 				3139C4A622C37BC700AA1AA1 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3139C4C222C3A57800AA1AA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3139C4C322C3A5A500AA1AA1 /* CalendarVars.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +180,10 @@
 				3139C4BD22C3845800AA1AA1 /* ProfileViewController.swift in Sources */,
 				3139C4BB22C3844600AA1AA1 /* CalendarViewController.swift in Sources */,
 				3139C4B922C3843700AA1AA1 /* WorkoutViewController.swift in Sources */,
+				3139C4C422C3A5A500AA1AA1 /* CalendarVars.swift in Sources */,
 				3139C4B722C3841C00AA1AA1 /* ProgressViewController.swift in Sources */,
 				3139C4B522C383FB00AA1AA1 /* ExcersisesViewController.swift in Sources */,
+				3139C4C122C3A2C500AA1AA1 /* DateCollectionViewCell.swift in Sources */,
 				3139C4A322C37BC700AA1AA1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
