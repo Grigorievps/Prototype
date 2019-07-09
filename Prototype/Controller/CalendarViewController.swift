@@ -153,7 +153,7 @@ extension CalendarViewController {
         }
         
         if cell.dateLable.textColor == UIColor.red {
-            cell.dateLable.textColor = UIColor.black
+            cell.dateLable.textColor = UIColor.lightGray
         }
         
         switch direction {
