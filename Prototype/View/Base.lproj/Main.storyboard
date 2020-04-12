@@ -1,51 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCp-61-PRo">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCp-61-PRo">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Exercises-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ExcersisesViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cB4-o6-btq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="e8k-Ap-Xt0"/>
-                                </constraints>
-                                <string key="text">
-EXERCISES</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="cB4-o6-btq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5l9-nn-QTo"/>
-                            <constraint firstItem="cB4-o6-btq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VxY-OW-PR6"/>
-                            <constraint firstItem="cB4-o6-btq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cRq-2g-vgq"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Exercises" image="men " id="d6i-eR-XeB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="132" y="833"/>
-        </scene>
-        <!--Progress-->
+        <!--Progress View Controller-->
         <scene sceneID="Z61-M6-3Kg">
             <objects>
                 <viewController id="X4t-DP-CBu" customClass="ProgressViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,69 +16,31 @@ EXERCISES</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nA9-W5-Nl7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="mLL-H1-uyk"/>
-                                </constraints>
-                                <string key="text">
-PROGRESS</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uyi-PA-7JK">
+                                <rect key="frame" x="16" y="54" width="288" height="32"/>
+                                <segments>
+                                    <segment title="Day"/>
+                                    <segment title="Week"/>
+                                    <segment title="Month"/>
+                                    <segment title="Year"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nA9-W5-Nl7" firstAttribute="trailing" secondItem="UBW-Fh-nxc" secondAttribute="trailing" id="HRR-EV-NAk"/>
-                            <constraint firstItem="nA9-W5-Nl7" firstAttribute="leading" secondItem="UBW-Fh-nxc" secondAttribute="leading" id="ZB3-Cf-YNG"/>
-                            <constraint firstItem="nA9-W5-Nl7" firstAttribute="top" secondItem="rqN-xS-mV6" secondAttribute="top" id="bjJ-Cv-neR"/>
+                            <constraint firstItem="UBW-Fh-nxc" firstAttribute="trailing" secondItem="Uyi-PA-7JK" secondAttribute="trailing" constant="16" id="XUl-Mj-c3u"/>
+                            <constraint firstItem="Uyi-PA-7JK" firstAttribute="leading" secondItem="UBW-Fh-nxc" secondAttribute="leading" constant="16" id="fH1-Xp-n1o"/>
+                            <constraint firstItem="Uyi-PA-7JK" firstAttribute="top" secondItem="UBW-Fh-nxc" secondAttribute="top" constant="10" id="hJp-3E-hy1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UBW-Fh-nxc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Progress" image="progress " id="QP2-zn-bi9"/>
+                    <navigationItem key="navigationItem" id="bmX-Bt-eo6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24C-e0-ZYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="833"/>
+            <point key="canvasLocation" x="1134" y="1593"/>
         </scene>
-        <!--WorkOut-->
-        <scene sceneID="Pdy-h3-SZ8">
-            <objects>
-                <viewController id="ZQf-9p-J4t" customClass="WorkoutViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kGF-CS-9FB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxO-N4-Ysg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="enE-3a-cbQ"/>
-                                </constraints>
-                                <string key="text">
-WORKOUT</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="RxO-N4-Ysg" firstAttribute="leading" secondItem="HBw-73-bem" secondAttribute="leading" id="IsS-Uy-l8G"/>
-                            <constraint firstItem="RxO-N4-Ysg" firstAttribute="top" secondItem="kGF-CS-9FB" secondAttribute="top" id="JBP-Oy-SEG"/>
-                            <constraint firstItem="RxO-N4-Ysg" firstAttribute="trailing" secondItem="HBw-73-bem" secondAttribute="trailing" id="ZiO-qE-t7J"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="HBw-73-bem"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="WorkOut" image="barbell " id="DPp-op-kfW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="69V-CC-ddd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1500" y="832"/>
-        </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="pwt-UF-eMf">
             <objects>
                 <viewController id="dNJ-GD-UKK" customClass="ProfileViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,20 +48,8 @@ WORKOUT</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJi-s4-713">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="dME-vp-ZsA"/>
-                                </constraints>
-                                <string key="text">
-PROFILE</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="99W-iR-Dao">
-                                <rect key="frame" x="30" y="115" width="261" height="190"/>
+                                <rect key="frame" x="29.5" y="59" width="261" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4NN-Gn-K4Z">
                                         <rect key="frame" x="0.0" y="0.0" width="103" height="186"/>
@@ -202,23 +115,19 @@ PROFILE</string>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fJi-s4-713" firstAttribute="trailing" secondItem="7fY-0M-n1t" secondAttribute="trailing" id="0TE-Ri-nem"/>
-                            <constraint firstItem="99W-iR-Dao" firstAttribute="leading" secondItem="7fY-0M-n1t" secondAttribute="leading" constant="30" id="Hwb-xB-fYX"/>
-                            <constraint firstItem="fJi-s4-713" firstAttribute="top" secondItem="TQN-D2-vla" secondAttribute="top" id="LrE-w4-Efi"/>
-                            <constraint firstItem="fJi-s4-713" firstAttribute="leading" secondItem="7fY-0M-n1t" secondAttribute="leading" id="Tzi-UA-VXz"/>
-                            <constraint firstItem="99W-iR-Dao" firstAttribute="top" secondItem="fJi-s4-713" secondAttribute="bottom" constant="40" id="pPu-oY-xIP"/>
+                            <constraint firstItem="99W-iR-Dao" firstAttribute="top" secondItem="7fY-0M-n1t" secondAttribute="top" constant="15" id="d5Z-kJ-qfx"/>
+                            <constraint firstItem="99W-iR-Dao" firstAttribute="centerX" secondItem="TQN-D2-vla" secondAttribute="centerX" id="d8C-pz-rhu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7fY-0M-n1t"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile " id="aM5-ZR-NhP"/>
+                    <navigationItem key="navigationItem" id="I9Z-4r-YLu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1X4-rk-eR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876.25" y="831.33802816901414"/>
+            <point key="canvasLocation" x="2768" y="1593"/>
         </scene>
-        <!--Calendar-->
+        <!--Calendar View Controller-->
         <scene sceneID="8rG-vM-noT">
             <objects>
                 <viewController id="umQ-yE-042" customClass="CalendarViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
@@ -227,7 +136,7 @@ PROFILE</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd2-Yt-X3Z">
-                                <rect key="frame" x="129.5" y="103" width="61" height="25"/>
+                                <rect key="frame" x="129.5" y="77" width="61" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Rr1-NU-fkC"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="qtg-Os-43s"/>
@@ -237,7 +146,7 @@ PROFILE</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cV-He-jr0">
-                                <rect key="frame" x="78.5" y="106" width="36" height="22"/>
+                                <rect key="frame" x="78.5" y="80" width="36" height="22"/>
                                 <state key="normal" title="&lt;">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -246,7 +155,7 @@ PROFILE</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5x-0s-gcu">
-                                <rect key="frame" x="135" y="80" width="50" height="20"/>
+                                <rect key="frame" x="135" y="54" width="50" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="cBj-M9-pF8"/>
                                     <constraint firstAttribute="height" constant="20" id="r5E-1o-f4m"/>
@@ -256,7 +165,7 @@ PROFILE</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="9Wv-Pw-PuA">
-                                <rect key="frame" x="30" y="133" width="260" height="20.5"/>
+                                <rect key="frame" x="30" y="107" width="260" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivZ-wt-SYn">
                                         <rect key="frame" x="0.0" y="0.0" width="22.5" height="20.5"/>
@@ -303,7 +212,7 @@ PROFILE</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0U-FH-PWa">
-                                <rect key="frame" x="205.5" y="106" width="36" height="22"/>
+                                <rect key="frame" x="205.5" y="80" width="36" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="Ym2-Jy-jJr"/>
                                     <constraint firstAttribute="height" constant="22" id="u31-tE-xHW"/>
@@ -315,20 +224,8 @@ PROFILE</string>
                                     <action selector="nextButtonPressed:" destination="umQ-yE-042" eventType="touchUpInside" id="L8G-25-iVf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlZ-wr-t0h">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="ytl-z7-Mns"/>
-                                </constraints>
-                                <string key="text">
-CALENDAR</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="USJ-in-t9f">
-                                <rect key="frame" x="30" y="166" width="260" height="170"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="USJ-in-t9f">
+                                <rect key="frame" x="30" y="140" width="260" height="170"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="vhv-DM-Ktc"/>
@@ -373,32 +270,28 @@ CALENDAR</string>
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4cV-He-jr0" firstAttribute="top" secondItem="A5x-0s-gcu" secondAttribute="bottom" constant="6" id="0Qz-iZ-RJF"/>
-                            <constraint firstItem="CNA-Tp-ttj" firstAttribute="trailing" secondItem="XlZ-wr-t0h" secondAttribute="trailing" id="3IZ-OF-LJy"/>
                             <constraint firstItem="Qd2-Yt-X3Z" firstAttribute="top" secondItem="A5x-0s-gcu" secondAttribute="bottom" constant="3" id="70b-cd-eQH"/>
                             <constraint firstItem="Qd2-Yt-X3Z" firstAttribute="centerX" secondItem="uQI-Im-QWN" secondAttribute="centerX" id="8tO-3A-eG1"/>
                             <constraint firstItem="USJ-in-t9f" firstAttribute="centerX" secondItem="uQI-Im-QWN" secondAttribute="centerX" id="AUr-KB-HI4"/>
-                            <constraint firstItem="XlZ-wr-t0h" firstAttribute="leading" secondItem="CNA-Tp-ttj" secondAttribute="leading" id="FoN-hq-4tS"/>
                             <constraint firstItem="4cV-He-jr0" firstAttribute="height" secondItem="J0U-FH-PWa" secondAttribute="height" id="Ggm-6Z-Ub3"/>
                             <constraint firstItem="9Wv-Pw-PuA" firstAttribute="leading" secondItem="uQI-Im-QWN" secondAttribute="leading" constant="30" id="Hiq-qg-N3t"/>
                             <constraint firstItem="4cV-He-jr0" firstAttribute="width" secondItem="J0U-FH-PWa" secondAttribute="width" id="IEF-fm-97g"/>
                             <constraint firstItem="9Wv-Pw-PuA" firstAttribute="top" secondItem="Qd2-Yt-X3Z" secondAttribute="bottom" constant="5" id="Ins-Xo-4Mh"/>
-                            <constraint firstItem="XlZ-wr-t0h" firstAttribute="top" secondItem="CNA-Tp-ttj" secondAttribute="top" constant="-20" id="Iyb-dm-vD6"/>
                             <constraint firstItem="USJ-in-t9f" firstAttribute="width" secondItem="9Wv-Pw-PuA" secondAttribute="width" id="VKw-u8-Grz"/>
                             <constraint firstAttribute="trailing" secondItem="9Wv-Pw-PuA" secondAttribute="trailing" constant="30" id="WAO-zS-zTQ"/>
                             <constraint firstItem="A5x-0s-gcu" firstAttribute="centerX" secondItem="uQI-Im-QWN" secondAttribute="centerX" id="WJx-NN-vgJ"/>
                             <constraint firstItem="USJ-in-t9f" firstAttribute="top" secondItem="9Wv-Pw-PuA" secondAttribute="bottom" constant="12.5" id="Xcz-6l-8r9"/>
+                            <constraint firstItem="A5x-0s-gcu" firstAttribute="top" secondItem="CNA-Tp-ttj" secondAttribute="top" constant="10" id="jhZ-23-8Bc"/>
                             <constraint firstItem="J0U-FH-PWa" firstAttribute="top" secondItem="A5x-0s-gcu" secondAttribute="bottom" constant="6" id="pNB-bs-v8w"/>
                             <constraint firstItem="Qd2-Yt-X3Z" firstAttribute="leading" secondItem="4cV-He-jr0" secondAttribute="trailing" constant="15" id="r1l-67-scV"/>
                             <constraint firstItem="9Wv-Pw-PuA" firstAttribute="centerX" secondItem="uQI-Im-QWN" secondAttribute="centerX" id="tcN-Om-gSp"/>
-                            <constraint firstItem="A5x-0s-gcu" firstAttribute="top" secondItem="XlZ-wr-t0h" secondAttribute="bottom" constant="5" id="w1H-WO-59E"/>
                             <constraint firstItem="J0U-FH-PWa" firstAttribute="leading" secondItem="Qd2-Yt-X3Z" secondAttribute="trailing" constant="15" id="z23-Ph-bSU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CNA-Tp-ttj"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar " id="yjD-fo-4mS"/>
+                    <navigationItem key="navigationItem" id="zqq-Jm-p9X"/>
                     <connections>
                         <outlet property="backButton" destination="4cV-He-jr0" id="3cc-5M-BWM"/>
                         <outlet property="calendarView" destination="USJ-in-t9f" id="JAg-mL-0dX"/>
@@ -409,7 +302,65 @@ CALENDAR</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIA-Z1-Jin" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188.125" y="831.33802816901414"/>
+            <point key="canvasLocation" x="1926" y="1593"/>
+        </scene>
+        <!--Workout Table View Controller-->
+        <scene sceneID="56q-j9-t0e">
+            <objects>
+                <tableViewController id="LBe-Rj-TC1" customClass="WorkoutTableViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IvQ-fb-IKs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="eIH-tT-vzj" customClass="ExerciseTableViewCell" customModule="Prototype" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="89.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eIH-tT-vzj" id="dcH-Ud-QDZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="B75-hu-tXH">
+                                            <rect key="frame" x="16" y="8" width="288" height="73.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ch-lM-kr1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72.5" height="73.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2ch-lM-kr1" secondAttribute="height" multiplier="60:61" id="4Wg-Jr-GR4"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNG-ni-blV">
+                                                    <rect key="frame" x="82.5" y="0.0" width="205.5" height="73.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="B75-hu-tXH" firstAttribute="top" secondItem="dcH-Ud-QDZ" secondAttribute="top" constant="8" id="CLs-WX-Pef"/>
+                                        <constraint firstAttribute="trailing" secondItem="B75-hu-tXH" secondAttribute="trailing" constant="16" id="g0W-Lx-47J"/>
+                                        <constraint firstItem="B75-hu-tXH" firstAttribute="leading" secondItem="dcH-Ud-QDZ" secondAttribute="leading" constant="16" id="gQE-1T-M5V"/>
+                                        <constraint firstAttribute="bottom" secondItem="B75-hu-tXH" secondAttribute="bottom" constant="8" id="h0s-bW-qJr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="exerciseImage" destination="2ch-lM-kr1" id="zZT-du-oZ7"/>
+                                    <outlet property="exerciseLable" destination="rNG-ni-blV" id="7wa-4F-rEA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LBe-Rj-TC1" id="hqG-7A-wZH"/>
+                            <outlet property="delegate" destination="LBe-Rj-TC1" id="KXZ-7I-Th6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xKv-QN-216"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="luP-h2-wHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="307.5" y="1592.9577464788733"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="s49-Rz-EY2">
@@ -422,22 +373,112 @@ CALENDAR</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WAa-MF-Dno"/>
-                        <segue destination="X4t-DP-CBu" kind="relationship" relationship="viewControllers" id="fru-pf-bBU"/>
-                        <segue destination="ZQf-9p-J4t" kind="relationship" relationship="viewControllers" id="g6s-qB-By1"/>
-                        <segue destination="umQ-yE-042" kind="relationship" relationship="viewControllers" id="cce-LI-Esw"/>
-                        <segue destination="dNJ-GD-UKK" kind="relationship" relationship="viewControllers" id="Gxb-u2-5wa"/>
+                        <segue destination="Din-pM-7Wc" kind="relationship" relationship="viewControllers" id="YJz-Aw-v9Y"/>
+                        <segue destination="mUb-m4-1uE" kind="relationship" relationship="viewControllers" id="fru-pf-bBU"/>
+                        <segue destination="ql3-EY-QgU" kind="relationship" relationship="viewControllers" id="cce-LI-Esw"/>
+                        <segue destination="86O-TD-KEw" kind="relationship" relationship="viewControllers" id="Gxb-u2-5wa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlB-Am-MIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1500" y="-102"/>
         </scene>
+        <!--WorkOut-->
+        <scene sceneID="1sm-nw-Wkk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Din-pM-7Wc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WorkOut" image="barbell " id="EEK-6b-apQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="aYr-px-rWI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LBe-Rj-TC1" kind="relationship" relationship="rootViewController" id="upu-Xf-Lad"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ldl-XZ-c5U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="828"/>
+        </scene>
+        <!--Progress-->
+        <scene sceneID="kSk-DD-rQ3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mUb-m4-1uE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Progress" image="progress " id="QP2-zn-bi9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="E5w-Wh-iNH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X4t-DP-CBu" kind="relationship" relationship="rootViewController" id="MkP-rN-Q7w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJx-Yn-S3j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136" y="827"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="uga-I3-W5k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ql3-EY-QgU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar " id="yjD-fo-4mS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="z7m-gu-UsR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="umQ-yE-042" kind="relationship" relationship="rootViewController" id="8jg-QK-RCJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSS-TQ-OPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="830"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="KBs-fa-N3D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="86O-TD-KEw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile " id="aM5-ZR-NhP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fsF-cE-2jF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dNJ-GD-UKK" kind="relationship" relationship="rootViewController" id="PE8-2R-iUD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKN-u2-hC3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2768" y="829"/>
+        </scene>
     </scenes>
     <resources>
         <image name="barbell " width="25" height="25"/>
         <image name="calendar " width="25" height="25"/>
-        <image name="men " width="25" height="25"/>
         <image name="profile " width="25" height="25"/>
         <image name="progress " width="25" height="25"/>
     </resources>

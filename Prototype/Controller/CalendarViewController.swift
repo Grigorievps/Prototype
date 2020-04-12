@@ -90,6 +90,8 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "CALENDAR"
+        
         currentMonth = months[month]
         monthLable.text = currentMonth
         yearLable.text = "\(year)"
